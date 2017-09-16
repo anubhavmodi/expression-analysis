@@ -1,0 +1,36 @@
+:host{
+  text-align:center;
+  padding:20px;
+  float:left;
+  color:cornflowerblue;
+  >div{
+    padding:0;
+    margin-bottom:10px;
+  }
+  .video-content{
+    border: 1px dotted grey;
+    border-radius : 4px;
+    padding:5px;
+    margin-bottom:10px;
+    max-width:600px;
+  }
+  .analysis-results{
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+  }
+  .analysis-status{
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+  }
+  .btn{
+    padding-left:0;
+    padding-right:0;
+  }
+  .btn+.btn{
+    margin-left:4.165%;
+  }
+}

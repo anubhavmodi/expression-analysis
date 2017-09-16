@@ -1,0 +1,38 @@
+<div class="col-xs-12">
+	<h3>Expression Analysis</h3>
+	<div class="col-xs-12">
+		<button class="btn btn-primary col-xs-4" (click)="startVideoCapture()" type="button">Start Capture</button> 
+		<button class="btn btn-primary col-xs-4" (click)="stopRecording()" type="button">Stop Capture</button> 
+		<button class="btn btn-primary col-xs-3" (click)="analyzeVideo()" type="button">Analyze</button>
+		<!-- <button class="btn btn-primary col-xs-3" (click)="snapshot()" type="button">Start Streaming</button>  --> 
+	</div>
+	<div class="analysis-status" *ngIf="analysisInProgress">
+		Analysis in progress... Please Wait...
+		<div *ngFor="let status of analysisStatus">
+			{{status}}
+		</div>
+	</div>
+	<div class="analysis-results" *ngIf="analysisCompleted && analysisResult">
+		<h4>Analysis Results </h4> 
+		<br>Anger 		: {{analysisResult.anger}}%
+		<br>Contempt 	: {{analysisResult.contempt}}%
+		<br>Disgust 	: {{analysisResult.disgust}}%
+		<br>Fear 		: {{analysisResult.fear}}%
+		<br>Happiness 	: {{analysisResult.happiness}}%
+		<br>Neutral 	: {{analysisResult.neutral}}%
+		<br>Sadness 	: {{analysisResult.sadness}}%
+		<br>Surprise 	: {{analysisResult.surprise}}%
+	</div>
+	<div class="analysis-results" *ngIf="age && gender && faceAnalysisCompleted">
+		<h3>Age: {{age}} years</h3>
+		<h3>Gender: {{gender}}</h3>
+	</div>
+</div>
+<div class="col-xs-12 video-content">
+	<video width="100%" height="auto" autoplay controls>
+	  
+	</video>
+</div>
+<img src="" width="200" height="200" style="display: none;">
+<canvas width="200" height="200" style="display: none;"></canvas>
+<a></a>
